@@ -1,0 +1,69 @@
+{
+  "authors": "Google, Inc.",
+  "changelog": "https://dl.google.com/dl/cpdc/ab79f3027f5ffbec/GoogleMaps-5.0.0-CHANGELOG.md",
+  "default_subspecs": [
+    "Maps"
+  ],
+  "description": "Use the Google Maps SDK for iOS to enrich your app with interactive maps, immersive Street View panoramas, and detailed information from Google's Places database.",
+  "homepage": "https://developers.google.com/maps/documentation/ios/",
+  "license": {
+    "text": "Copyright 2021 Google",
+    "type": "Copyright"
+  },
+  "name": "GoogleMaps-m1",
+  "platforms": {
+    "ios": "11.0"
+  },
+  "readme": "https://dl.google.com/dl/cpdc/ab79f3027f5ffbec/GoogleMaps-5.0.0-README.md",
+  "source": {
+    "http": "http://binary/artifactory/repopods/GoogleMaps/5.0.0/GoogleMaps.zip"
+  },
+  "summary": "Google Maps SDK for iOS.",
+  "version": "5.0.0",
+  "subspecs": [
+    {
+      "frameworks": [
+        "CoreData",
+        "CoreGraphics",
+        "CoreLocation",
+        "QuartzCore",
+        "SystemConfiguration",
+        "UIKit"
+      ],
+      "libraries": [
+        "c++",
+        "z"
+      ],
+      "name": "Base",
+      "vendored_frameworks": [
+        "GoogleMapsBase.xcframework"
+      ]
+    },
+    {
+      "dependencies": {
+        "GoogleMaps-m1/Base": [
+
+        ]
+      },
+      "frameworks": [
+        "Accelerate",
+        "CoreImage",
+        "CoreTelephony",
+        "CoreText",
+        "GLKit",
+        "ImageIO",
+        "Metal",
+        "OpenGLES",
+        "QuartzCore"
+      ],
+      "name": "Maps",
+      "resources": [
+        "GoogleMaps.xcframework/ios-arm64_armv7/GoogleMaps.framework/Resources/GoogleMaps.bundle"
+      ],
+      "vendored_frameworks": [
+        "GoogleMaps.xcframework",
+        "GoogleMapsCore.xcframework"
+      ]
+    }
+  ]
+}
